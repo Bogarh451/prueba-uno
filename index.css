@@ -112,7 +112,7 @@ header {
 }
 
 /*PRODUCTS */
-.presentation-title {
+.menu-title {
   width: 100%;
   height: 40vh;
 
@@ -122,7 +122,7 @@ header {
   align-items: flex-end;
 }
 
-.presentation-title > div:nth-child(1) {
+.menu-title > div:nth-child(1) {
   height: 100%;
   
   padding: 2rem;
@@ -134,7 +134,7 @@ header {
   cursor: pointer;
 }
 
-.presentation-title > div:nth-child(2) {
+.menu-title > div:nth-child(2) {
   padding: 2rem;
   height: 100%;
   display: flex;
@@ -187,8 +187,12 @@ header {
   width: 100%;
   height: 122vh;
 
-  position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
   top: 0;
   bottom: 0;
   left: 0;
@@ -197,7 +201,10 @@ header {
 
 .line-horizontal {
   width: 100%;
-  height: calc(100% / 2);
+  height: 1px;
+  margin: 0;
+  padding: 0;
+
 
   border-bottom: 1px solid black;
   transform: scaleX(0);
@@ -249,6 +256,8 @@ header {
 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 3px;
+  grid-column-gap:4px;
   box-sizing: border-box;
   position: absolute;
   
@@ -304,11 +313,17 @@ header {
   background-color: #573234;
   box-sizing: border-box;
 }
-
 .product:nth-child(6){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+.product:nth-child(6)>div{
+  width: 100%;
+  height: 100%;
   background-color: #f8f535;
-  flex-wrap: wrap;
   padding: 5rem;
 }
 
@@ -362,5 +377,280 @@ header {
   background-repeat: no-repeat;
 }
 
-/*nostros*/
+/*Nostros*/
+
+
+.container-aboutUs{
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+
+.title-aboutUs{
+  padding: 2rem;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: scaleY(1.1);
+  cursor: pointer;
+}
+
+.card__content{
+  width:100vw;
+  height: 100vh;
+  
+  position:relative;
+  overflow: hidden;
+}
+
+.card__front{
+  width:100vw;
+  height: 100vh;
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  border: 1px solid black;
+  display:flex;
+  flex-direction: row;
+}
+
+.peoples-one h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.peoples-one{
+  width:50vw;
+  height: 100vh;
+
+}
+.peoples-one > div{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.peoples-two{
+  width:50vw;
+  height: 100vh;
+  background-image: url("../img/nosotros.jpg");
+  background-position: right top;
+  background-size: cover;
+  display: block;  
+  margin: 0;
+  padding: 0;
+}
+
+.card__back{
+  width:100vw;
+  height: 100vh;
+
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+.vertical-line{
+  height:0%;
+  width: 1px;
+  background-color:black;
+  transition-duration:2s;
+}
+
+.vertical-line-spawn{
+  height:100%;
+}
+
+
+.our-work{
+  width:100vw;
+  height: 80vh;
+  
+   position:relative;
+   overflow: hidden;
+  
+  display:flex;
+  flex-direction:row;
+  border:1px solid black;
+}
+
+.our-work-front{
+  width:100vw;
+  height: 100vh;
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
+}
+.our-work-front h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.work{
+  width: calc(100%/3);
+  height:80vh;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+ul,p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.work > .card-blue{
+  height: 100%;
+  width: 86%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  background-color:rgb(34, 33, 107);
+  color: black;
+}
+
+.work > .card-white{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  color: black;
+}
+
+
+
+.our-work-back{
+  width:100vw;
+  height: 80vh;
+
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+.lines{
+  width:calc(100% / 3);
+  height:0%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  
+  transition-duration: 2s;
+}
+
+.lines-spawn{
+  height:100%;
+}
+
+
+.redes__content{
+  width:100vw;
+  height: 30vh;
+  
+   position:relative;
+   overflow: hidden;
+  
+  display:flex;
+  flex-direction:row;
+  border-bottom:1px solid black;
+}
+
+.redes__content h1{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.redes__content-front{
+   width:100%;
+  height: 100%;
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.redes__content-back{
+  width:100%;
+  height: 100%;
+
+  
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+.line-redes{
+  width:1px;
+  height: 0%;
+  transition-duration: 2s;
+  background-color:black;
+}
+
+.line-redes-spawn{
+  height: 100%;
+}
+.redes__content-front>div:nth-child(1){
+  width:50%;
+  padding: 2rem;
+}
+.redes__content-front>div:nth-child(2){
+  width:50%;
+  padding: 2rem;
+}
 

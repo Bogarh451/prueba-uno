@@ -37,7 +37,7 @@ tl.add({
   delay: anime.stagger(100) 
 })
 
-/*SCROLL MAGIC*/
+/*SCROLL MAGIC MENU*/
 
 import ScrollMagic  from 'ScrollMagic';
 import addIndicators from '../node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
@@ -47,7 +47,7 @@ var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
   triggerElement: ".container-menu",
   triggerHook: .3,
-  //reverse: false
+  reverse: false
 })
 .setClassToggle(".line-horizontal", "spawn__line-horizontal")
 .addIndicators()
@@ -56,7 +56,7 @@ var scene = new ScrollMagic.Scene({
 var scene2 = new ScrollMagic.Scene({
   triggerElement: ".container-menu",
   triggerHook: .25,
-  //reverse: false
+  reverse: false
 })
 .setClassToggle(".line-vertical", "spawn__line-vertical")
 .addIndicators()
@@ -71,7 +71,36 @@ var scene3 = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
  
-/*animaciones presentacion*/
+/*SCROLL MAGIC NOSOTROS*/
+var scene4 = new ScrollMagic.Scene({
+  triggerElement: ".card__content",
+  triggerHook: 0,
+  reverse: false,
+  
+})
+.setClassToggle(".vertical-line", "vertical-line-spawn")
+.addIndicators()
+.addTo(controller);
+
+var scene5 = new ScrollMagic.Scene({
+  triggerElement: ".our-work",
+  triggerHook: 0,
+  reverse: false,
+
+})
+.setClassToggle(".lines", "lines-spawn")
+.addIndicators()
+.addTo(controller);
+
+var scene6 = new ScrollMagic.Scene({
+  triggerElement: ".redes__content",
+  triggerHook: 0,
+  reverse: false,
+
+})
+.setClassToggle(".line-redes", "line-redes-spawn")
+.addIndicators()
+.addTo(controller);
     
 
 
